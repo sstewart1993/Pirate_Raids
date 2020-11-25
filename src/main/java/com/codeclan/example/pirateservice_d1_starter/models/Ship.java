@@ -17,8 +17,8 @@ public class Ship {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnoreProperties({"ship"})
     @OneToMany(mappedBy = "ship")
+    @JsonIgnoreProperties({"ship"})
     private List<Pirate> pirates;
 
     public Ship(String name) {
